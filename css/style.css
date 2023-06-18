@@ -1,0 +1,164 @@
+*{
+	border:0;
+	margin:0;
+	box-sizing:border-box;
+}
+li{
+	list-style:none;
+}
+@media(min-width:250px){
+	.content{
+		height:50vh;
+	}
+	.contact{
+		height:50vh;
+	}
+	#banner h5{
+		font-size:15px;
+	}
+	.case-row .owl-dots{
+		right:0;
+	}
+}
+@media(min-width:620px){
+	.content{
+		height:70vh;
+	}
+	.contact{
+		height:30vh;
+	}
+	#banner h5{
+		font-size:18px;
+	}
+	.case-row .owl-dots{
+		right:100px;;
+	}
+}
+@media(min-width:990px){
+	.case-row .owl-dots{
+		right:100px;;
+	}
+}
+.banner1{
+	background:url("https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/slides/slide-2.jpg");
+	background-size:cover;
+}
+.row2{
+	background:url("https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/slides/slide-1.jpg");
+}
+#experties,#case{
+	background-color:#eef4f2;
+}
+.carousel-indicators {
+    position: initial!important;
+}
+.carousel-indicators [data-bs-target] {
+    flex: 0 1 auto;
+    width: 30px;
+    height:30px!important;
+    text-indent: 0px!important;
+    background-color: green!important;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+	border-radius:50%!important;
+}
+.card{
+	border:none!important;
+	background-color:#eef4f2!important;
+}
+.owl-dot span {
+	border:none!important;
+}
+.owl-nav{
+	display:none!important;
+}
+.case-row .owl-dots{
+	position:absolute;
+	top:-45px;
+}
+#team .owl-dots{
+	position:absolute;
+	top:-45px;
+	text-align:right!important;
+}
+.aside{
+	float:right;
+}
+#testimoni button{
+	width:20px!important;
+	height:20px!important;
+	border:none!important;
+}
+#testimoni .carousel-indicators{
+	top:-50px;
+}
+.team-icons{
+	width:40px;
+	height:40px;
+	top:-20px;
+	right:15px;
+}
+.team-icon{
+	width:40px;
+	height:40px;
+}
+#team{
+	background-color:#eef4f2!important;
+}
+footer{
+	background:url("https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/contact/contact-background.jpg");
+	background-size:cover;
+}
+.footer-icon{
+	width:30px;
+	height:30px;
+}
+.form-control {
+	border:none!important;
+}
+header{
+	background-color: #212529!important;
+	z-index:100;
+}
+#banner{
+	background-color: #212529;
+}
+.about-banner{
+	height:35vh;
+}
+.track{
+	font-size:12px!important;
+}
+.case-content,#teams{
+	background-color:#eef4f2;
+}
+.card1{
+	margin-top:30px!important;
+}
+#cases h6{
+	font-size:12px!important;
+}
+#teams .column{
+	margin-top:30px;
+}
+.blog-date{
+	bottom:10%;
+	right:0px;
+}
+#contact span{
+	border-right:none!important;
+}
+.column:hover img{
+	transform:scale(1.1);
+	transition:all .3s;
+}
+.team-icons:hover .mda{
+	top:-95px;
+	visibility:visible;
+	transition:all .3s;
+}
+.mda{
+	top:-50px;
+	border-radius:30px;
+	visibility:hidden;
+}
