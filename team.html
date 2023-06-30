@@ -13,6 +13,11 @@
 		<link href="owl/owl.theme.default.min.css" rel="stylesheet">
 		<link href="owl/owl.carousel.min.css" rel="stylesheet">
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+		<style>
+			h6{
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -62,13 +67,13 @@
 			<div class="container">
 				<div class="py-5">
 					<div class="d-flex gap-4 align-items-center">
-						<h6 class="text-white bg-success py-2 px-3">SHOW ALL</h6>
-						<h6 class="border border-success text-success py-2 px-3">LEADERSHIP</h6>
-						<h6 class="border border-success text-success py-2 px-3">OTHER</h6>
+						<h6 id="all" class="text-white border border-success bg-success py-2 px-3">SHOW ALL</h6>
+						<h6 id="leader" class="border border-success text-success py-2 px-3">LEADERSHIP</h6>
+						<h6 id="other" class="border border-success text-success py-2 px-3">OTHER</h6>
 					</div>
 					
 					<div class="row">
-					<div class="column overflow-hidden col-12 col-md-6 col-lg-4">
+					<div class="column all leader overflow-hidden col-12 col-md-6 col-lg-4">
 						<div class="overflow-hidden">
 							<img class="w-100" src="https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/team/team-1.jpg">
 						</div>
@@ -83,7 +88,7 @@
 						</div>
 					</div>
 					
-					<div class="column overflow-hidden col-12 col-md-6 col-lg-4">
+					<div class="column all other overflow-hidden col-12 col-md-6 col-lg-4">
 						<div class="overflow-hidden">
 							<img class="w-100" src="https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/team/team-2.jpg">
 						</div>
@@ -98,7 +103,7 @@
 						</div>
 					</div>
 					
-					<div class="column overflow-hidden col-12 col-md-6 col-lg-4">
+					<div class="column all other overflow-hidden col-12 col-md-6 col-lg-4">
 						<div class="overflow-hidden">
 							<img class="w-100" src="https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/team/team-3.jpg">
 						</div>
@@ -113,7 +118,7 @@
 						</div>
 					</div>
 					
-					<div class="column overflow-hidden col-12 col-md-6 col-lg-4">
+					<div class="column all leader overflow-hidden col-12 col-md-6 col-lg-4">
 						<div class="overflow-hidden">
 							<img class="w-100" src="https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/team/team-4.jpg">
 						</div>
@@ -128,7 +133,7 @@
 						</div>
 					</div>
 					
-					<div class="column col-12 col-md-6 col-lg-4">
+					<div class="column all other col-12 col-md-6 col-lg-4">
 						<div class="overflow-hidden">
 							<img class="w-100" src="https://www.okler.net/previews/porto/9.9.2/img/demos/business-consulting/team/team-5.jpg">
 						</div>
@@ -223,6 +228,68 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script src="owl/owl.carousel.min.js"></script>
-		<script src="js/main.js"></script>
+		<script>
+			var all=document.querySelector("#all");
+			var leader=document.querySelector("#leader");
+			var other=document.querySelector("#other");
+			var card=document.querySelectorAll(".column");
+
+			leader.addEventListener("click",function(){
+				leader.classList.add("bg-success");
+				all.classList.remove("bg-success");
+				other.classList.remove("bg-success");
+
+				leader.classList.add("text-white");
+				all.classList.remove("text-white");
+				other.classList.remove("text-white");
+				all.classList.add("text-success");
+				other.classList.add("text-success");
+				card.forEach(function(x){
+					if(x.classList.contains("leader")){
+						x.style.display="block";
+					}
+					else{
+						x.style.display="none";
+					}
+				})
+			});
+
+			all.addEventListener("click",function(){
+				all.classList.add("bg-success");
+				leader.classList.remove("bg-success");
+				other.classList.remove("bg-success");
+
+				all.classList.add("text-white");
+				leader.classList.remove("text-white");
+				other.classList.remove("text-white");
+				leader.classList.add("text-success");
+				other.classList.add("text-success");
+				card.forEach(function(x){
+						x.style.display="block";
+				})
+			});
+
+			other.addEventListener("click",function(){
+				other.classList.add("bg-success");
+				all.classList.remove("bg-success");
+				leader.classList.remove("bg-success");
+
+				other.classList.add("text-white");
+				all.classList.remove("text-white");
+				leader.classList.remove("text-white");
+				all.classList.add("text-success");
+				leader.classList.add("text-success");
+				card.forEach(function(x){
+					if(x.classList.contains("other")){
+						x.style.display="block";
+					}
+					else{
+						x.style.display="none";
+					}
+				})
+			});
+
+
+		</script>
 	</body>
 </html>
